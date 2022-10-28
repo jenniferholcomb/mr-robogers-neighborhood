@@ -4,11 +4,12 @@ function isEmpty(input) {
   return (input.trim().length === 0);
 }
 
-function computeInput (inputNumbers) {
-  if (isEmpty(inputNumbers)) {
+function computeInput (input) {
+  if (isEmpty(input)) {
     return 0;
   }
   console.log("we've got numbers");
+  const userInput = input.
 }
 //   const creditCardNumbers = inputNumbers.trim().split("");
 //   let doubledArray = [];

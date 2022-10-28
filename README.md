@@ -24,19 +24,23 @@ This browser application allows users to participate in a 5 question survey to d
 ##Tests
 
 ''' 
-Describe: emptyString()
-
+Describe: emptyString(input)
 Test: "It should return 0 for an empty string."
-Code: emptyString("");
+Code: isEmpty(input);
 Expected Output: 0
 
-Test: "It should return 0 for a string that is only spaces."
-Code: wordCounter("            ");
-Expected Output: 0
+Describe: computeInput()
 
-Test: "It only take a string with numbers"
-Code: wordCounter("hi there 77");
-Expected Output: 2
+Test: "Numbers 1-9, look for any number that starts with a 1."
+Code: 
+const number = "9";
+const wordOne = "Beep!";
+computeInput(number);
+Expected Output: 0, "Beep!", 2, 3, 4, 5, 6, 7, 8, 9
+
+Test: 
+Code:
+Expected Output: 
 
 '''
 
