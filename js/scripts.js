@@ -69,6 +69,14 @@ function computeInput(numberArray) {
   return indexCounter;
 }
 
+function reverse(finalArray) {
+  const reverseArray = [];
+  for (index = (finalArray.length - 1); index >= 0 ; index -= 1) {      
+    reverseArray.push(finalArray[index]);
+  }
+  return reverseArray;
+}
+
 // UI Logic
 
 function handleFormSubmission(e){
@@ -77,6 +85,7 @@ function handleFormSubmission(e){
   document.getElementById("output-passage").removeAttribute("class");
   document.getElementById("user-input").innerText = computeInput(numToArray(inputNumber));
   document.getElementById("user-output").innerText = newArray;
+  document.getElementById("reverse-output").innerText = reverse(newArray);
   document.querySelector("form#number-in").reset();
   newArray = [];
 }
