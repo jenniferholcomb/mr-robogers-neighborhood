@@ -44,8 +44,23 @@ function computeInput(numberArray) {
     else {
       let str = indexCounter.toString();
       const doubleDigitArray = str.split('');
+      i = 0;
+      doubleEvaluateArray = [];
       console.log(doubleDigitArray);
-
+      doubleDigitArray.forEach(function(number) {
+        if (doubleDigitArray[i] === 3) {
+          doubleEvaluateArray.push(doubleDigitArray[i]);
+        }
+        else if (doubleDigitArray[i] === 2) {
+          doubleEvaluateArray.push(doubleDigitArray[i]);
+        }
+        else if (doubleDigitArray[i] === 1) {
+          console.log("here");
+          doubleEvaluateArray.push(doubleDigitArray[i]);
+        }
+        i++;
+       console.log(doubleEvaluateArray);
+      });
     }
     indexCounter++;
   });
