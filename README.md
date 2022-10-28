@@ -78,12 +78,12 @@ const doubleDigitArray = [];
 computeInput(number);
 Expected Output: 0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, [1,0]
 
-Test: "Numbers 10 and higher, split numbers to array of 2."
+Test: "Numbers 10 and higher. Evaluate new split array of two numbers for numbers 1,2,3"
 Code: 
-const number = "10";
+const number = "12";
 const doubleDigitArray = [];
 computeInput(number);
-Expected Output: 0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, [1,0]
+Expected Output: 0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, [1,0], [1,1], [1,2]
 
 '''
 

@@ -20,14 +20,14 @@ function numToArray (input) {
 
 function checkValues(indexCounter) {
   const array = newArray;
-  if (indexCounter === 1) {
-    newArray.push("Beep!");
+  if (indexCounter === 3) {
+    newArray.push("Won't you be my neighbor?");
   }
   else if (indexCounter === 2) {
     newArray.push("Boop!");
   }
-  else if (indexCounter === 3) {
-    newArray.push("Won't you be my neighbor?");
+  else if (indexCounter === 1) {
+    newArray.push("Beep!");
   }
   else {
     newArray.push(indexCounter);
