@@ -1,6 +1,6 @@
 // Business Logic
 
-const newArray = [];
+//const newArray = [];
 
 function isEmpty(input) {
   return (input.trim().length === 0);
@@ -18,7 +18,7 @@ function numToArray (input) {
   return numberArray;
 }
 
-function checkValues(indexCounter) {
+function checkValues(indexCounter, newArray) {
   if (indexCounter === 3) {
     newArray.push("Won't you be my neighbor?");
   }
@@ -31,14 +31,15 @@ function checkValues(indexCounter) {
   else {
     newArray.push(indexCounter);
   }
+  return newArray;
 }
 
-function computeInput(numberArray) {
+function computeInput(numberArray, newArray) {
   console.log(numberArray);
   indexCounter = 0;
   numberArray.forEach(function(number) {
     if (indexCounter < 10) {
-      checkValues(indexCounter);
+      checkValues(indexCounter, newArray);
     }
     else {
       let str = indexCounter.toString();
@@ -76,9 +77,15 @@ function computeInput(numberArray) {
 function handleFormSubmission(e){
   e.preventDefault();
   const inputNumber = (document.getElementById("input-value-1")).value;
-  const numOutput = computeInput(numToArray(inputNumber));
+  let newArray = [];
+  const numOutput = computeInput(numToArray(inputNumber, newArray));
+  document.querySelector("form#number-in").reset();
+  newArray = [];
+  console.log("here");
 }
 
 window.addEventListener("load", function(){
   document.querySelector("form#number-in").addEventListener("submit", handleFormSubmission);
+
+
 });
