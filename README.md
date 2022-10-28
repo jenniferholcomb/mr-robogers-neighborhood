@@ -71,10 +71,17 @@ const doubleDigitArray = [];
 computeInput(number);
 Expected Output: 0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, [1,0]
 
-Test: "Numbers 10 and higher. Evaluate new split array of two numbers; check if first number is equal to 1, 2, or 3. "
+Test: "Numbers 10 and higher. Evaluate new split array of two numbers; check if any numbers are equal to 1, 2, or 3. Return to new array"
 Code: 
 const number = "12";
-const doubleDigitArray = [];
+const doubleEvaluateArray = [];
+computeInput(number);
+Expected Output: [1,2]
+
+Test: "In new array, if length > 1, evaluate which number is the highest."
+Code: 
+const number = "12";
+const doubleEvaluateArray = [];
 computeInput(number);
 Expected Output: 0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, [1,0], [1,1], [1,2]
 

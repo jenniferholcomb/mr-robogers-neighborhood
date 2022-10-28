@@ -34,6 +34,11 @@ function checkValues(indexCounter) {
   }
 }
 
+function numberGreatest (array) {
+  const number = Math.max.apply(null, array);
+  return number;
+}
+
 function computeInput(numberArray) {
   console.log(numberArray);
   indexCounter = 0;
@@ -48,19 +53,19 @@ function computeInput(numberArray) {
       doubleEvaluateArray = [];
       console.log(doubleDigitArray);
       doubleDigitArray.forEach(function(number) {
-        if (doubleDigitArray[i] === 3) {
+        if (parseInt(doubleDigitArray[i]) === 3) {
           doubleEvaluateArray.push(doubleDigitArray[i]);
         }
-        else if (doubleDigitArray[i] === 2) {
+        else if (parseInt(doubleDigitArray[i]) === 2) {
           doubleEvaluateArray.push(doubleDigitArray[i]);
         }
-        else if (doubleDigitArray[i] === 1) {
-          console.log("here");
+        else if (parseInt(doubleDigitArray[i]) === 1) {
           doubleEvaluateArray.push(doubleDigitArray[i]);
         }
         i++;
-       console.log(doubleEvaluateArray);
       });
+      let numGreat = numberGreatest(doubleEvaluateArray);
+      console.log("this is the greatest number:", numGreat);
     }
     indexCounter++;
   });
