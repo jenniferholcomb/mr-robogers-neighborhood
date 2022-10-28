@@ -9,12 +9,23 @@ function computeInput (input) {
     return 0;
   }
   const userInputNumber = parseInt(input);
-  console.log(userInputNumber);
   const numberArray = [];
   for (let indexCounter = 0; indexCounter <= userInputNumber; indexCounter++) {
     numberArray.push(indexCounter);
   }
   console.log(numberArray);
+  indexCounter = 0;
+  const newArray = [];
+  numberArray.forEach(function(number) {
+    if (indexCounter === 1) {
+      newArray.push("Beep!");
+    }
+    else {
+      newArray.push(indexCounter);
+    }
+    indexCounter++;
+  });
+  console.log(newArray);
 }
 //   const creditCardNumbers = inputNumbers.trim().split("");
 //   let doubledArray = [];
