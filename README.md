@@ -2,7 +2,7 @@
 
 #### By Jennifer Holcomb
 
-#### A user survey about programming languages.
+#### A program that asks user to enter a number, prints a sequential list up to that number with alternative output for numbers 1, 2, or 3.
 
 ## Technologies Used
 
@@ -13,7 +13,7 @@
 
 ## Description
 
-This browser application allows users to participate in a 5 question survey to determine what programming language they should learn first.
+A program that asks user to enter a number. Then prints a sequestial list where 3 to changed to "Would you be my neighbor?, 2 changed to "boop", 1 changed to "beep". For multi-digit numbers, hierarchy is 3 to 1.
 
 ## Setup/Installation Requirements
 
@@ -77,7 +77,7 @@ Expected Output: [0, 'Beep!', 'Boop!', "Won't you be my neighbor?", 4, 5, 6, 7, 
 '''
 
 ## Known Bugs
-* Fine tuning branching results.
+* No known bugs.
 * If any issues are discovered, please email jenniferlholcomb@gmail.com.
 
 ## License
