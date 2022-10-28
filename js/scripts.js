@@ -1,6 +1,6 @@
 // Business Logic
 
-const newArray = [];
+let newArray = [];
 
 function isEmpty(input) {
   return (input.trim().length === 0);
@@ -20,21 +20,20 @@ function numToArray (input) {
 
 function checkValues(indexCounter) {
   if (indexCounter === 3) {
-    newArray.push("Won't you be my neighbor?");
+    newArray.push(" " + "Won't you be my neighbor?");
   }
   else if (indexCounter === 2) {
-    newArray.push("Boop!");
+    newArray.push(" " + "Boop!");
   }
   else if (indexCounter === 1) {
-    newArray.push("Beep!");
+    newArray.push(" " + "Beep!");
   }
   else {
-    newArray.push(indexCounter);
+    newArray.push(" " + indexCounter);
   }
 }
 
 function computeInput(numberArray) {
-  console.log(numberArray);
   indexCounter = 0;
   numberArray.forEach(function(number) {
     if (indexCounter < 10) {
@@ -70,7 +69,6 @@ function computeInput(numberArray) {
   return indexCounter;
 }
 
-
 // UI Logic
 
 function handleFormSubmission(e){
@@ -80,11 +78,9 @@ function handleFormSubmission(e){
   document.getElementById("user-input").innerText = computeInput(numToArray(inputNumber));
   document.getElementById("user-output").innerText = newArray;
   document.querySelector("form#number-in").reset();
-  console.log("here");
+  newArray = [];
 }
 
 window.addEventListener("load", function(){
   document.querySelector("form#number-in").addEventListener("submit", handleFormSubmission);
-
-
 });
