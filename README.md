@@ -25,18 +25,21 @@ This browser application allows users to participate in a 5 question survey to d
 
 ''' 
 Describe: emptyString(input)
+
 Test: "It should return 0 for an empty string."
 Code: isEmpty(input);
 Expected Output: 0
 
-Describe: computeInput()
+Describe: numToArray()
 
 Test: "Take input number, return an array with all numbers 0 to inputnumber"
 Code: 
 const number = "9";
 const numberArray = [];
-computeInput(number);
+numToArray(number);
 Expected Output: "1, 2, 3, 4, 5, 6, 7, 8, 9"
+
+Describe: computeInput()
 
 Test: "Numbers 1-9, look for any number that starts with a 1. Return string with "Beep! in place of 1."
 Code: 
@@ -58,6 +61,20 @@ const number = "9";
 const wordOne = "Won't you be my neighbor?";
 computeInput(number);
 Expected Output: 0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9
+
+Test: "Numbers 1-9, look for any number that starts with a 3. Return string with "Won't you be my neighbor?" in place of 3."
+Code: 
+const number = "9";
+const wordOne = "Won't you be my neighbor?";
+computeInput(number);
+Expected Output: 0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9
+
+Test: "Numbers 10 and higher, split numbers to array of 2."
+Code: 
+const number = "10";
+const doubleDigitArray = [];
+computeInput(number);
+Expected Output: 0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, [1,0]
 
 '''
 

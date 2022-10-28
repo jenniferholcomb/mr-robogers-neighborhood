@@ -21,22 +21,31 @@ function computeInput(numberArray) {
   indexCounter = 0;
   const newArray = [];
   numberArray.forEach(function(number) {
-    if (indexCounter === 1) {
-      newArray.push("Beep!");
-    }
-    else if (indexCounter === 2) {
-      newArray.push("Boop!");
-    }
-    else if (indexCounter === 3) {
-      newArray.push("Won't you be my neighbor?");
+    if (indexCounter < 10) {
+      if (indexCounter === 1) {
+        newArray.push("Beep!");
+      }
+      else if (indexCounter === 2) {
+        newArray.push("Boop!");
+      }
+      else if (indexCounter === 3) {
+        newArray.push("Won't you be my neighbor?");
+      }
+      else {
+        newArray.push(indexCounter);
+      }
     }
     else {
-      newArray.push(indexCounter);
+      let str = indexCounter.toString();
+      const doubleDigitArray = str.split('');
+      console.log(doubleDigitArray);
     }
     indexCounter++;
   });
   console.log(newArray);
 }
+
+
 //   const creditCardNumbers = inputNumbers.trim().split("");
 //   let doubledArray = [];
 //   let normalArray = [];
