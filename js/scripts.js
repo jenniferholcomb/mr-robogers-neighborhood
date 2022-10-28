@@ -19,7 +19,6 @@ function numToArray (input) {
 }
 
 function checkValues(indexCounter) {
-  const array = newArray;
   if (indexCounter === 3) {
     newArray.push("Won't you be my neighbor?");
   }
@@ -32,11 +31,6 @@ function checkValues(indexCounter) {
   else {
     newArray.push(indexCounter);
   }
-}
-
-function numberGreatest (array) {
-  const number = Math.max.apply(null, array);
-  return number;
 }
 
 function computeInput(numberArray) {
@@ -52,6 +46,7 @@ function computeInput(numberArray) {
       i = 0;
       doubleEvaluateArray = [];
       console.log(doubleDigitArray);
+      
       doubleDigitArray.forEach(function(number) {
         if (parseInt(doubleDigitArray[i]) === 3) {
           doubleEvaluateArray.push(doubleDigitArray[i]);
@@ -64,8 +59,13 @@ function computeInput(numberArray) {
         }
         i++;
       });
-      let numGreat = numberGreatest(doubleEvaluateArray);
-      console.log("this is the greatest number:", numGreat);
+      if (doubleEvaluateArray.length > 0) {
+        const number = Math.max.apply(null, doubleEvaluateArray);
+        checkValues(number);
+      }
+      else {
+
+      }
     }
     indexCounter++;
   });
