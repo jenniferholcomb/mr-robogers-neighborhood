@@ -61,7 +61,7 @@ function computeInput(numberArray) {
         checkValues(number);
       }
       else {
-        newArray.push(indexCounter);
+        newArray.push(" " + indexCounter);
       }
     }
     indexCounter++;
