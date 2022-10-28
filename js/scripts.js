@@ -1,5 +1,7 @@
 // Business Logic
 
+const newArray = [];
+
 function isEmpty(input) {
   return (input.trim().length === 0);
 }
@@ -16,29 +18,34 @@ function numToArray (input) {
   return numberArray;
 }
 
+function checkValues(indexCounter) {
+  const array = newArray;
+  if (indexCounter === 1) {
+    newArray.push("Beep!");
+  }
+  else if (indexCounter === 2) {
+    newArray.push("Boop!");
+  }
+  else if (indexCounter === 3) {
+    newArray.push("Won't you be my neighbor?");
+  }
+  else {
+    newArray.push(indexCounter);
+  }
+}
+
 function computeInput(numberArray) {
   console.log(numberArray);
   indexCounter = 0;
-  const newArray = [];
   numberArray.forEach(function(number) {
     if (indexCounter < 10) {
-      if (indexCounter === 1) {
-        newArray.push("Beep!");
-      }
-      else if (indexCounter === 2) {
-        newArray.push("Boop!");
-      }
-      else if (indexCounter === 3) {
-        newArray.push("Won't you be my neighbor?");
-      }
-      else {
-        newArray.push(indexCounter);
-      }
+      checkValues(indexCounter);
     }
     else {
       let str = indexCounter.toString();
       const doubleDigitArray = str.split('');
       console.log(doubleDigitArray);
+
     }
     indexCounter++;
   });
