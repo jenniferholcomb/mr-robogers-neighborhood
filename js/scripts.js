@@ -8,8 +8,13 @@ function computeInput (input) {
   if (isEmpty(input)) {
     return 0;
   }
-  console.log("we've got numbers");
-  const userInput = input.
+  const userInputNumber = parseInt(input);
+  console.log(userInputNumber);
+  const numberArray = [];
+  for (let indexCounter = 0; indexCounter <= userInputNumber; indexCounter++) {
+    numberArray.push(indexCounter);
+  }
+  console.log(numberArray);
 }
 //   const creditCardNumbers = inputNumbers.trim().split("");
 //   let doubledArray = [];
@@ -35,8 +40,6 @@ function computeInput (input) {
 function handleFormSubmission(e){
   e.preventDefault();
   const inputNumber = (document.getElementById("input-value-1")).value;
-//  const inputNumber = parseInt(document.getElementById("input-value-1").value);
-  console.log("inputNumber: ", inputNumber);
   const numOutput = computeInput(inputNumber);
 }
 

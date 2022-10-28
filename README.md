@@ -31,6 +31,13 @@ Expected Output: 0
 
 Describe: computeInput()
 
+Test: "Take input number, return an array with all numbers 0 - inputnumber"
+Code: 
+const number = "9";
+const numberArray = [];
+computeInput(number);
+Expected Output: "1, 2, 3, 4, 5, 6, 7, 8, 9"
+
 Test: "Numbers 1-9, look for any number that starts with a 1."
 Code: 
 const number = "9";
