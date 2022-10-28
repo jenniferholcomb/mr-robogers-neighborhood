@@ -20,6 +20,12 @@ function computeInput (input) {
     if (indexCounter === 1) {
       newArray.push("Beep!");
     }
+    else if (indexCounter === 2) {
+      newArray.push("Boop!");
+    }
+    else if (indexCounter === 3) {
+      newArray.push("Won't you be my neighbor?");
+    }
     else {
       newArray.push(indexCounter);
     }
