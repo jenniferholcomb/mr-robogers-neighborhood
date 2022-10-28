@@ -4,7 +4,7 @@ function isEmpty(input) {
   return (input.trim().length === 0);
 }
 
-function computeInput (input) {
+function numToArray (input) {
   if (isEmpty(input)) {
     return 0;
   }
@@ -13,6 +13,10 @@ function computeInput (input) {
   for (let indexCounter = 0; indexCounter <= userInputNumber; indexCounter++) {
     numberArray.push(indexCounter);
   }
+  return numberArray;
+}
+
+function computeInput(numberArray) {
   console.log(numberArray);
   indexCounter = 0;
   const newArray = [];
@@ -57,7 +61,7 @@ function computeInput (input) {
 function handleFormSubmission(e){
   e.preventDefault();
   const inputNumber = (document.getElementById("input-value-1")).value;
-  const numOutput = computeInput(inputNumber);
+  const numOutput = computeInput(numToArray(inputNumber));
 }
 
 window.addEventListener("load", function(){
