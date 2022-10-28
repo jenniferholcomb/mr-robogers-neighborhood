@@ -1,9 +1,12 @@
-.hidden{
+.hidden {
   display: none;
 }
 
-ol{
+.list-output {
+  font-weight: bolder;
+  font-size: large;
+}
+
+.output {
   font-style: italic;
-  font-weight: 400;
-  font-size: 30;
 }
