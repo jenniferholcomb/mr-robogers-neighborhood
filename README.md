@@ -70,6 +70,10 @@ Test: "For new array (doubleEvaluateArray), send highest value to checkValues() 
 Code: computeInput(2);
 Expected Output: "boop"
 
+Test: "For any multi-digit number that does not contain a 1,2,or3, push that number to newArray.
+Code: computeInput(45);
+Expected Output: [0, 'Beep!', 'Boop!', "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, 'Beep!', 'Beep!', 'Boop!', "Won't you be my neighbor?", 'Beep!, ...., 44, 45']
+
 '''
 
 ## Known Bugs
