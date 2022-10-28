@@ -1,3 +1,5 @@
+// Business Logic
+
 function isEmpty(testString) {
   return (testString.trim().length === 0);
 }
@@ -29,3 +31,20 @@ function checkAllNumbers (inputNumbers) {
     }
     console.log(doubledArray, normalArray);
 }
+
+// UI Logic
+
+function handleFormSubmission(e){
+
+  e.preventDefault();
+  const inputNumber = parseInt(document.getElementById("input-value-1").value);
+  console.log("inputNumber1: ", inputNumber1);
+  const numIncrement = multiplier(inputNumber1);
+
+  console.log("numIncrement: ", numIncrement);
+}
+
+window.addEventListener("load", function(){
+
+  document.querySelector("form#number-in").addEventListener("submit", handleFormSubmission);
+});
