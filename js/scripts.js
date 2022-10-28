@@ -1,6 +1,6 @@
 // Business Logic
 
-//const newArray = [];
+const newArray = [];
 
 function isEmpty(input) {
   return (input.trim().length === 0);
@@ -18,7 +18,7 @@ function numToArray (input) {
   return numberArray;
 }
 
-function checkValues(indexCounter, newArray) {
+function checkValues(indexCounter) {
   if (indexCounter === 3) {
     newArray.push("Won't you be my neighbor?");
   }
@@ -31,15 +31,14 @@ function checkValues(indexCounter, newArray) {
   else {
     newArray.push(indexCounter);
   }
-  return newArray;
 }
 
-function computeInput(numberArray, newArray) {
+function computeInput(numberArray) {
   console.log(numberArray);
   indexCounter = 0;
   numberArray.forEach(function(number) {
     if (indexCounter < 10) {
-      checkValues(indexCounter, newArray);
+      checkValues(indexCounter);
     }
     else {
       let str = indexCounter.toString();
@@ -68,7 +67,7 @@ function computeInput(numberArray, newArray) {
     }
     indexCounter++;
   });
-  console.log(newArray);
+  return indexCounter;
 }
 
 
@@ -77,10 +76,10 @@ function computeInput(numberArray, newArray) {
 function handleFormSubmission(e){
   e.preventDefault();
   const inputNumber = (document.getElementById("input-value-1")).value;
-  let newArray = [];
-  const numOutput = computeInput(numToArray(inputNumber, newArray));
+  document.getElementById("output-passage").removeAttribute("class");
+  document.getElementById("user-input").innerText = computeInput(numToArray(inputNumber));
+  document.getElementById("user-output").innerText = newArray;
   document.querySelector("form#number-in").reset();
-  newArray = [];
   console.log("here");
 }
 
