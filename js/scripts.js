@@ -1,7 +1,4 @@
 // Business Logic
-
-let newArray = [];
-
 function isEmpty(input) {
   return (input.trim().length === 0);
 }
@@ -18,7 +15,7 @@ function numToArray (input) {
   return numberArray;
 }
 
-function checkValues(indexCounter) {
+function checkValues(indexCounter, newArray) {
   if (indexCounter === 3) {
     newArray.push(" " + "Won't you be my neighbor?");
   }
@@ -31,20 +28,21 @@ function checkValues(indexCounter) {
   else {
     newArray.push(" " + indexCounter);
   }
+  return newArray;
 }
 
-function computeInput(numberArray) {
-  indexCounter = 0;
-  numberArray.forEach(function(number) {
+function computeInput(numberArray, newArray) {
+  let indexCounter = 0;
+  numberArray.forEach(function() {
     if (indexCounter < 10) {
-      checkValues(indexCounter);
+      newArray = checkValues(indexCounter, newArray);
     }
     else {
       let str = indexCounter.toString();
       const doubleDigitArray = str.split('');
-      i = 0;
-      doubleEvaluateArray = []; 
-      doubleDigitArray.forEach(function(number) {
+      let i = 0;
+      let doubleEvaluateArray = []; 
+      doubleDigitArray.forEach(function() {
         if (parseInt(doubleDigitArray[i]) === 3) {
           doubleEvaluateArray.push(doubleDigitArray[i]);
         }
@@ -58,7 +56,7 @@ function computeInput(numberArray) {
       });
       if (doubleEvaluateArray.length > 0) {
         const number = Math.max.apply(null, doubleEvaluateArray);
-        checkValues(number);
+        checkValues(number, newArray);
       }
       else {
         newArray.push(" " + indexCounter);
@@ -66,12 +64,13 @@ function computeInput(numberArray) {
     }
     indexCounter++;
   });
+  console.log("function" + newArray);
   return indexCounter;
 }
 
 function reverse(finalArray) {
   const reverseArray = [];
-  for (index = (finalArray.length - 1); index >= 0 ; index -= 1) {      
+  for (let index = (finalArray.length - 1); index >= 0 ; index -= 1) {      
     reverseArray.push(finalArray[index]);
   }
   return reverseArray;
@@ -81,9 +80,12 @@ function reverse(finalArray) {
 
 function handleFormSubmission(e){
   e.preventDefault();
+  let newArray = [];
   const inputNumber = (document.getElementById("input-value-1")).value;
   document.getElementById("output-passage").removeAttribute("class");
-  document.getElementById("user-input").innerText = computeInput(numToArray(inputNumber));
+  console.log(newArray);
+  document.getElementById("user-input").innerText = computeInput((numToArray(inputNumber)), newArray) - 1;
+  console.log(newArray);
   document.getElementById("user-output").innerText = newArray;
   document.getElementById("reverse-output").innerText = reverse(newArray);
   document.querySelector("form#number-in").reset();
