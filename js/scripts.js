@@ -64,7 +64,6 @@ function computeInput(numberArray, newArray) {
     }
     indexCounter++;
   });
-  console.log("function" + newArray);
   return indexCounter;
 }
 
@@ -83,9 +82,7 @@ function handleFormSubmission(e){
   let newArray = [];
   const inputNumber = (document.getElementById("input-value-1")).value;
   document.getElementById("output-passage").removeAttribute("class");
-  console.log(newArray);
   document.getElementById("user-input").innerText = computeInput((numToArray(inputNumber)), newArray) - 1;
-  console.log(newArray);
   document.getElementById("user-output").innerText = newArray;
   document.getElementById("reverse-output").innerText = reverse(newArray);
   document.querySelector("form#number-in").reset();
